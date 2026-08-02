@@ -1,0 +1,27 @@
+{
+  "telemetry": {
+    "device_id": "labmate-01",
+    "mission_id": "MIS-20260802-001",
+    "timestamp": "2026-08-02T12:00:00+07:00",
+    "mode": "SIMULATION",
+    "state": "IN_TRANSIT",
+    "connection": "ONLINE",
+    "door_state": "CLOSED",
+    "lock_state": "LOCKED",
+    "acceleration": {
+      "x_g": 0.04,
+      "y_g": 0.02,
+      "z_g": 1.01,
+      "peak_g": 1.08
+    },
+    "orientation": {
+      "tilt_deg": 3.2
+    },
+    "environment": {
+      "temperature_c": 24.6,
+      "humidity_rh": 48.2,
+      "pressure_hpa": 1008.0
+    },
+    "battery_percent": 82
+  }
+}

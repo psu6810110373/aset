@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0b0f19;
+    background-image: 
+      radial-gradient(at 15% 15%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+      radial-gradient(at 85% 85%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@keyframes pulseWarn {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.animate-pulse-warn {
+  animation: pulseWarn 1.5s infinite ease-in-out;
+}
