@@ -423,14 +423,18 @@ export default function App() {
             onCopyPayload={handleCopyPayload}
             onResetDemo={handleResetDemo}
           />
-          <TesaiotPanel />
+
+          
+          {/*<TesaiotPanel />*/}
+
+
         </div>
       </div>
 
       {/* Toast Notification */}
       {toastMsg && (
-        <div className="fixed bottom-6 right-6 z-50 bg-slate-900 text-slate-100 border border-blue-500/50 shadow-2xl px-5 py-3 rounded-xl text-sm font-semibold animate-bounce flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-blue-400" />
+        <div className="fixed bottom-6 right-6 z-50 bg-[#0c2b4e] text-white border border-[#1d546c] shadow-clinical-lg px-5 py-3 rounded-xl text-sm font-semibold flex items-center gap-2.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#60a5fa] animate-pulse" />
           {toastMsg}
         </div>
       )}

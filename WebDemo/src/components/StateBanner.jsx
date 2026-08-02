@@ -5,51 +5,51 @@ export default function StateBanner({ state }) {
   const getBannerStyle = (currentState) => {
     switch (currentState) {
       case 'ALERT':
-        return 'bg-red-500/15 border-red-500/50 text-red-300';
+        return 'bg-[#ffdad6] border-[#ffb4ab] text-[#ba1a1a]';
       case 'COMPLETED':
-        return 'bg-emerald-500/15 border-emerald-500/50 text-emerald-300';
+        return 'bg-[#d1fae5] border-[#a7f3d0] text-[#065f46]';
       case 'IN_TRANSIT':
-        return 'bg-blue-500/15 border-blue-500/50 text-blue-300';
+        return 'bg-[#dbeafe] border-[#bfdbfe] text-[#1e40af]';
       case 'ARRIVED':
-        return 'bg-amber-500/15 border-amber-500/50 text-amber-300';
+        return 'bg-[#fef3c7] border-[#fde68a] text-[#92400e]';
       default:
-        return 'bg-slate-800/80 border-slate-700 text-slate-300';
+        return 'bg-[#e2e8f0] border-[#cbd5e1] text-[#334155]';
     }
   };
 
   const getIndicatorStyle = (currentState) => {
     switch (currentState) {
       case 'ALERT':
-        return 'bg-red-500 shadow-lg shadow-red-500/80 animate-pulse';
+        return 'bg-[#ba1a1a] shadow-md shadow-[#ba1a1a]/50 animate-pulse';
       case 'COMPLETED':
-        return 'bg-emerald-500 shadow-lg shadow-emerald-500/80';
+        return 'bg-[#059669] shadow-md shadow-[#059669]/50';
       case 'IN_TRANSIT':
-        return 'bg-blue-500 shadow-lg shadow-blue-500/80 animate-pulse';
+        return 'bg-[#0c2b4e] shadow-md shadow-[#0c2b4e]/50 animate-pulse';
       default:
-        return 'bg-slate-400';
+        return 'bg-[#64748b]';
     }
   };
 
   return (
-    <div className={`border rounded-xl p-4 flex items-center justify-between transition-colors ${getBannerStyle(state.state)}`}>
-      <div className="flex items-center gap-3">
+    <div className={`border rounded-2xl p-5 flex items-center justify-between transition-colors shadow-clinical ${getBannerStyle(state.state)}`}>
+      <div className="flex items-center gap-3.5">
         <div className={`w-3.5 h-3.5 rounded-full ${getIndicatorStyle(state.state)}`} />
         <div>
-          <span className="text-[11px] uppercase tracking-wider text-slate-400 block font-medium">
+          <span className="label-caps opacity-75 block">
             สถานะปัจจุบัน (Current Mission State)
           </span>
-          <span className="font-mono font-bold text-lg tracking-wide">
+          <span className="font-mono font-bold text-xl tracking-wide">
             {state.state}
           </span>
         </div>
       </div>
 
       <div className="text-right">
-        <span className="text-[11px] uppercase tracking-wider text-slate-400 block font-medium">
+        <span className="label-caps opacity-75 block">
           Mission Identifier
         </span>
-        <span className="font-mono font-semibold text-sm text-blue-400 flex items-center gap-1 justify-end">
-          <Activity className="w-3.5 h-3.5" />
+        <span className="font-mono font-bold text-sm flex items-center gap-1.5 justify-end">
+          <Activity className="w-4 h-4 opacity-80" />
           {state.mission_id}
         </span>
       </div>
